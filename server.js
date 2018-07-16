@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 4570;
 var db = require("./models");
 
 //Routing
-require("./routes/routes")(app);
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 
 // Setting up Body Parser
 app.use(bodyParser.urlencoded({ entended: true }));
@@ -25,7 +26,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Start server after sync-ing SQL db. 
-db.sequelize.sync({ force: true}).then(function () {
+db.sequelize.sync().then(function () {
     app.listen(PORT, function() {
         console.log("Listening on PORT: " + PORT);
     });
