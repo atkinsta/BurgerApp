@@ -1,0 +1,32 @@
+// Dependancies
+let express = require("express");
+let bodyParser = require("body-parser");
+let exphbs = require("express-handlebars");
+
+// Server setup
+let app = express();
+const PORT = process.env.PORT || 4570;
+
+// Importing models
+var db = require("./models");
+
+//Routing
+require("./routes/routes")(app);
+
+// Setting up Body Parser
+app.use(bodyParser.urlencoded({ entended: true }));
+app.use(bodyParser.json());
+
+//Static server for public folder
+app.use(express.static("public"));
+
+//setting up view engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+//Start server after sync-ing SQL db. 
+db.sequelize.sync({ force: true}).then(function () {
+    app.listen(PORT, function() {
+        console.log("Listening on PORT: " + PORT);
+    });
+});
