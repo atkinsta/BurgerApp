@@ -10,10 +10,6 @@ const PORT = process.env.PORT || 4570;
 // Importing models
 var db = require("./models");
 
-//Routing
-require("./routes/api-routes")(app);
-require("./routes/html-routes")(app);
-
 // Setting up Body Parser
 app.use(bodyParser.urlencoded({ entended: true }));
 app.use(bodyParser.json());
@@ -24,6 +20,10 @@ app.use(express.static("public"));
 //setting up view engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+//Routing
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 
 //Start server after sync-ing SQL db. 
 db.sequelize.sync().then(function () {

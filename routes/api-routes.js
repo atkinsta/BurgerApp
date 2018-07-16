@@ -7,5 +7,14 @@ module.exports = app => {
             res.json(data);
         });
     });
+
+    app.post("/api/burgers", (req, res) => {
+        Burger.create({
+            burger_name: req.body.name,
+            eaten: req.body.eaten
+        }).then(data => {
+            res.json(data);
+        });
+    });
 }
 
