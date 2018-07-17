@@ -3,8 +3,8 @@ let Burger = db.Burger;
 
 module.exports = app => {
     app.get("/", (req, res) => {
-        Burger.findAll({}).then(data => {
-            res.render("index", { burgers: data })
+        Burger.findAll({}).then(burgers => {
+            res.render("index", {burgers: burgers});
         })
     })
 }
