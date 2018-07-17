@@ -13,11 +13,25 @@
 
 <body>
     <div class="container">
-        <div class="row text-center">
-            <header></header>
+        <div class="row align-left">
+            <div class="jumbotron">
+                <div class="float-right">
+                    <h2>Bob's Burger Joint</h2>
+                    <h4>Home of the tastiest burgers and the best ExpressJS based service, improved with Sequelize!</h4>
+                </div>
+            </div>
         </div>
         <div class="row">
             {{{body}}}
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="placeholder"></div>
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="newburger" id="newburger">
+                <button id="addburger" class="btn btn-warning">Add a Burger</button>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

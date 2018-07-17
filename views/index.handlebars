@@ -3,19 +3,19 @@
 </div>
 <div class="col-md-4" id="noteaten-holder">
     {{#each burgers}}
-        {{#if eaten}}
+        {{#unless eaten}}
             <div class="line float-right">
                 <p style="width: 100%" class="burger float-right">{{burger_name}} <button class="btn btn-success eat" data-id={{id}}>Eat!</button> </p>
             </div>
-        {{/if}}
+        {{/unless}}
     {{/each}}
 </div>
 
 <div class="col-md-4" id="eaten-holder">
     {{#each burgers}}
-        {{#unless eaten}}
+        {{#if eaten}}
             <p class="eatenburger">{{burger_name}} <button class="btn btn-danger delete" data-id={{id}}>Remove!</button> </p>
-        {{/unless}}
+        {{/if}}
     {{/each}}
 </div>
 
