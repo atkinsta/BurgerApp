@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $(document).on("keydown", "#newburger", function(event) { // Alows the user to press enter instead of clicking the button.
+    $(document).on("keyup", "#newburger", function(event) { // Alows the user to press enter instead of clicking the button.
         event.preventDefault();
         if (event.keyCode === 13) {
             addBurger();
