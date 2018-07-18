@@ -5,7 +5,7 @@
     {{#each burgers}}
         {{#unless eaten}}
             <div class="container" style="width: auto;">
-                <span class="burger">{{burger_name}} </span><button class="btn btn-success eat pull-right" data-id={{id}}>Eat Burger!</button>
+                <span class="burger">{{id}}. {{burger_name}} </span><button class="btn btn-success eat pull-right" data-id={{id}}>Eat Burger!</button>
             </div>
         {{/unless}}
     {{/each}}
@@ -15,7 +15,7 @@
     {{#each burgers}}
         {{#if eaten}}
         <div class="container" style="width: auto;">
-            <button class="btn btn-danger delete" data-id={{id}}>Remove Plate!</button> <span class="eatenburger pull-right">{{burger_name}} </span>
+            <button class="btn btn-danger delete" data-id={{id}}>Remove Plate!</button> <span class="eatenburger pull-right">{{id}}. {{burger_name}} </span>
         </div>
         {{/if}}
     {{/each}}
