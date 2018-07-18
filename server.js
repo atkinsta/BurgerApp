@@ -8,7 +8,7 @@ let app = express();
 const PORT = process.env.PORT || 4570;
 
 // Importing models
-var db = require("./models");
+let db = require("./models");
 
 // Setting up Body Parser
 app.use(bodyParser.urlencoded({ entended: true }));
