@@ -12,4 +12,9 @@ Handlebars takes care of the dynamic HTML building!
 
 Built into the back-end is a fully RESTful API which supports CRUD (Create, Read, Update, and Delete) opperations. 
 
+## This app follows other "best-practices" for web-app development.
+
+* Object-Relational Mapping
+* Model-View-Controller
+
 
