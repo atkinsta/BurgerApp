@@ -1,3 +1,21 @@
-body.class {
-    background-color: white;
+body {
+    background-image: url("../images/tic-tac-toe.png")
+}
+
+h2 {
+    font-family: 'Knewave', cursive;
+}
+
+h4 {
+    font-family: 'Merienda', cursive;
+}
+
+.eatenburger, 
+.burger {
+    font-family: 'Merienda', cursive;
+    font-size: 1.3em;
+}
+
+#burgerlist {
+    text-align: center;
 }

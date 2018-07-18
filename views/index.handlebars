@@ -1,20 +1,22 @@
 <div class="col-md-2">
 
 </div>
-<div class="col-md-4" id="noteaten-holder">
+<div class="col-md-4 clearfix" id="noteatenholder">
     {{#each burgers}}
         {{#unless eaten}}
-            <div class="line float-right">
-                <p style="width: 100%" class="burger float-right">{{burger_name}} <button class="btn btn-success eat" data-id={{id}}>Eat!</button> </p>
+            <div class="container" style="width: auto;">
+                <span class="burger">{{burger_name}} </span><button class="btn btn-success eat pull-right" data-id={{id}}>Eat Burger!</button>
             </div>
         {{/unless}}
     {{/each}}
 </div>
 
-<div class="col-md-4" id="eaten-holder">
+<div class="col-md-4" id="eatenholder">
     {{#each burgers}}
         {{#if eaten}}
-            <p class="eatenburger">{{burger_name}} <button class="btn btn-danger delete" data-id={{id}}>Remove!</button> </p>
+        <div class="container" style="width: auto;">
+            <button class="btn btn-danger delete" data-id={{id}}>Remove Plate!</button> <span class="eatenburger pull-right">{{burger_name}} </span>
+        </div>
         {{/if}}
     {{/each}}
 </div>

@@ -9,19 +9,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/burger_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Knewave|Merienda" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <div class="row align-left">
-            <div class="jumbotron">
-                <div class="float-right">
-                    <h2>Bob's Burger Joint</h2>
-                    <h4>Home of the tastiest burgers and the best ExpressJS based service, improved with Sequelize!</h4>
-                </div>
-            </div>
-        </div>
         <div class="row">
+            <div class="col-md-6">
+                <img src="../../assets/images/burger.png" class="pull-right" alt="" srcset="">
+            </div>
+            <div class="col-md-4">
+                <h2>Bob's Burger Joint</h2>
+                <hr>
+                <h4>Home of the tastiest burgers and the best ExpressJS based service, improved with Sequelize!</h4>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <h2 id="burgerlist">Burger List</h2>
+            <hr>
             {{{body}}}
         </div>
         <div class="row">
@@ -29,8 +36,12 @@
                 <div class="placeholder"></div>
             </div>
             <div class="col-md-4">
-                <input type="text" name="newburger" id="newburger">
-                <button id="addburger" class="btn btn-warning">Add a Burger</button>
+                <div class="form-row text-center">
+                    <br>
+                    <input type="text" class="form-control" name="newburger" id="newburger" required>
+                    <br>
+                    <button id="addburger" class="btn btn-warning">Add a Burger</button>
+                </div>
             </div>
         </div>
     </div>
